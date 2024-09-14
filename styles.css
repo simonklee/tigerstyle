@@ -1,0 +1,170 @@
+/* Fonts */
+@font-face {
+  font-family: 'Liberation Mono';
+  src: url('./fonts/LiberationMono.woff2') format('woff2'),
+    url('./fonts/LiberationMono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Liberation Mono';
+  src: url('./fonts/LiberationMono-Bold.woff2') format('woff2'),
+    url('./fonts/LiberationMono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #fff;
+  color: rgb(2 6 23);
+  font-family: 'Liberation Mono', monospace;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 32px;
+}
+
+/* Titles */
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.version {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+h2,
+h3,
+h4 {
+  margin-top: 32px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+/* Paragraphs */
+p,
+blockquote,
+ol,
+ul {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+pre {
+  font-size: 13px;
+  padding: 2px 4px;
+  overflow-x: auto;
+}
+
+blockquote {
+  margin: 20px 0;
+  padding-left: 15px;
+  border-left: 2px solid #000;
+  font-style: italic;
+}
+
+/* Lists */
+ol,
+ul {
+  margin-left: 0;
+  padding-left: 32px;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ol.summary,
+ol.summary ol {
+  counter-reset: section;
+  padding-left: 0px;
+  margin-bottom: 0;
+  margin-left: 20px;
+
+}
+
+ol.summary li,
+ol.summary ol li {
+  display: block;
+}
+
+ol.summary li::before,
+ol.summary ol li::before {
+  counter-increment: section;
+  content: counters(section, ".") ". ";
+  padding-right: 5px;
+}
+
+ol.summary ol li::before {
+  content: counters(section, ".") " ";
+}
+
+.supplementary {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+hr.section-divider {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #0014EE;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  .container {
+    max-width: 658px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+}
