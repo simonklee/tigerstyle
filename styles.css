@@ -1,6 +1,6 @@
 :root {
   --font-family: 'Liberation Mono', monospace;
-  --line-height: 1.5;
+  --line-height: 1.4rem;
   --border-thickness: 2px;
   --text-color: rgb(2 6 23);
   --text-color-alt: #666;
@@ -83,13 +83,10 @@ body {
 h2,
 h3,
 h4 {
-  margin-top: var(--spacing-xl);
-  margin-bottom: 0;
   font-weight: bold;
 }
 
 h2 {
-  margin-top: var(--spacing-xxl);
   font-size: var(--font-size-h2);
 }
 
@@ -100,6 +97,23 @@ h3 {
 h4 {
   font-size: var(--font-size-h4);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: calc(var(--line-height) * 2) 0 0;
+  line-height: var(--line-height);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: calc(2 * var(--line-height));
+  margin-bottom: calc(var(--line-height) * 2);
+}
+
 
 /* Content elements */
 p,
