@@ -17,9 +17,9 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://tigerstyle.dev" />
 
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:creator" content="@simonkleee">
-	<meta name="twitter:title" content="Tiger Style">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="@simonkleee" />
+	<meta name="twitter:title" content="Tiger Style" />
 	<meta name="twitter:description"
 		content="A coding philosophy focused on safety, performance, and developer experience." />
 
@@ -88,8 +88,8 @@
 		<p>
 			A good developer experience improves code quality and maintainability.
 			Readable and easy-to-work-with code encourages collaboration and reduces
-			errors, leading to a healthier codebase
-			that stands the test of time <a href="#addendum-zero-technical-debt">[1]</a>.
+			errors, leading to a healthier codebase that stands the test of time
+			<a href="#addendum-zero-technical-debt">[1]</a>.
 		</p>
 
 		<h2 id="2-design-goals">2. Design goals</h2>
@@ -104,9 +104,9 @@
 		<p>
 			Safety in coding relies on clear, structured practices that prevent
 			errors and strengthen the codebase. It's about writing code that works
-			in all situations and catches problems early. By focusing on safety,
-			you create reliable software that behaves predictably no matter where
-			it runs.
+			in all situations and catches problems early. By focusing on safety, you
+			create reliable software that behaves predictably no matter where it
+			runs.
 		</p>
 
 		<h4 id="control-and-limits">Control and limits</h4>
@@ -145,6 +145,18 @@
 					easier to understand, test, and debug. They promote single
 					responsibility, where each function does one thing well, leading to
 					a more modular and maintainable codebase.
+				</p>
+			</li>
+
+			<li id="centralize-control-flow">
+				<p>
+					<strong>Centralize control flow</strong>: Keep switch or if
+					statements in the main parent function, and move non-branching logic
+					to helper functions. Let the parent function manage state, using
+					helpers to calculate changes without directly applying them. Keep
+					leaf functions pure and focused on specific computations. This
+					divides responsibility: one function controls flow, others handle
+					specific logic.
 				</p>
 			</li>
 		</ul>
